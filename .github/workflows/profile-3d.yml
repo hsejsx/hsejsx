@@ -13,11 +13,10 @@
         - uses: actions/checkout@v3
         - uses: yoshi389111/github-profile-3d-contrib@0.7.1
           env:
-            MY_TOKEN: ${{ secrets.MY_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
             USERNAME: ${{ github.repository_owner }}
         - name: Commit & Push
           run: |
-            echo $MY_TOKEN
             git config user.name hsejsx
             git config user.email hsejsx@gmail.com
             git add -A .
